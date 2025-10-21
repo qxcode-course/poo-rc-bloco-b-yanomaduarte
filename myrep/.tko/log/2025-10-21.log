@@ -1,0 +1,5 @@
+2025-10-21 08:19:35, MOVE, v:1, k:poo@chinela, mode:DOWN
+2025-10-21 10:07:01, MOVE, v:1, k:poo@notebook, mode:DOWN
+2025-10-21 10:24:17, MOVE, v:1, k:poo@chinela, mode:PICK
+2025-10-21 10:24:18, EXEC, v:1, k:poo@chinela, mode:FREE, size:18
+2025-10-21 11:06:48, MOVE, v:1, k:poo@chinela, mode:BACK

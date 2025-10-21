@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-21_10-24-18",
+            "content": "class Chinela:\n    def __init__(self):\n        self.__tamanho = 0\n\n    def getTamanho(self):\n        return self.__tamanho\n\n    def setTamanho(self, valor: int):\n        self.__tamanho = tamanho\n\nchinela = Chinela()\n\nwhile chinela.getTamanho() == 0:\n    print(\"Digite seu tamanho de chinela\")\n    tamanho = int(input())\n    chinela.setTamanho(tamanho)\n\nprint(\"Parabens, voc\u00ea comprou uma chinela tamanho\", chinela.getTamanho())",
+            "lines": "18"
+        }
+    ]
+}
