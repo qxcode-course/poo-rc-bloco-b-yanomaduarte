@@ -2,8 +2,13 @@
     "patches": [
         {
             "label": "2025-10-21_10-24-18",
-            "content": "class Chinela:\n    def __init__(self):\n        self.__tamanho = 0\n\n    def getTamanho(self):\n        return self.__tamanho\n\n    def setTamanho(self, valor: int):\n        self.__tamanho = tamanho\n\nchinela = Chinela()\n\nwhile chinela.getTamanho() == 0:\n    print(\"Digite seu tamanho de chinela\")\n    tamanho = int(input())\n    chinela.setTamanho(tamanho)\n\nprint(\"Parabens, voc\u00ea comprou uma chinela tamanho\", chinela.getTamanho())",
+            "content": "@@ -167,287 +167,33 @@\n     \n-if valor %3C 20 or valor %3E 50:%0A            print(%22Tamanho inv%C3%A1lido. Digite um tamanho entre 20 e 50.%22)%0A            return%0A%0A        if valor %25 2 != 0:%0A            print(%22Tamanho inv%C3%A1lido. Digite um tamanho par entre 20 e 50.%22)%0A            return%0A%0A        self.__tamanho = valor%0A    \n+self.__tamanho = tamanho%0A\n %0Achi\n@@ -263,16 +263,17 @@\n igite se\n+u\n  tamanho\n@@ -347,14 +347,8 @@\n anho\n-_input\n )%0A%0Ap\n@@ -362,9 +362,9 @@\n arab\n-%C3%A9\n+e\n ns, \n",
             "lines": "18"
+        },
+        {
+            "label": "2025-10-22_08-23-22",
+            "content": "class Chinela:\n    def __init__(self):\n        self.__tamanho = 0\n\n    def getTamanho(self):\n        return self.__tamanho\n\n    def setTamanho(self, valor: int):\n        if valor < 20 or valor > 50:\n            print(\"Tamanho inv\u00e1lido. Digite um tamanho entre 20 e 50.\")\n            return\n\n        if valor % 2 != 0:\n            print(\"Tamanho inv\u00e1lido. Digite um tamanho par entre 20 e 50.\")\n            return\n\n        self.__tamanho = valor\n    \nchinela = Chinela()\n\nwhile chinela.getTamanho() == 0:\n    print(\"Digite se tamanho de chinela\")\n    tamanho = int(input())\n    chinela.setTamanho(tamanho_input)\n\nprint(\"Parab\u00e9ns, voc\u00ea comprou uma chinela tamanho\", chinela.getTamanho())",
+            "lines": "26"
         }
     ]
 }
