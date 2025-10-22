@@ -18,6 +18,7 @@ expanded:
 - poo@bloco_b-agregação-simples
 tasks:
   poo@chinela: '{rate:100, human:_, alone:7, study:120}'
+  poo@camisa: '{rate:100, human:_, iagen:_, alone:8, study:120}'
 flags:
   quests: 0
   tracks: 0
