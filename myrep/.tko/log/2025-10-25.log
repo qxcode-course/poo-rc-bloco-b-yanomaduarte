@@ -1,0 +1,8 @@
+2025-10-25 10:21:53, MOVE, v:1, k:poo@roupa, mode:PICK
+2025-10-25 10:21:54, EXEC, v:1, k:poo@roupa, mode:FULL, rate:0, size:35
+2025-10-25 10:25:27, EXEC, v:1, k:poo@roupa, mode:FULL, rate:0, size:36
+2025-10-25 10:26:08, MOVE, v:1, k:poo@roupa, mode:PICK
+2025-10-25 10:26:09, EXEC, v:1, k:poo@roupa, mode:FULL, rate:0
+2025-10-25 10:27:27, EXEC, v:1, k:poo@roupa, mode:FULL, rate:100, size:37
+2025-10-25 10:27:42, MOVE, v:1, k:poo@roupa, mode:BACK
+2025-10-25 10:28:16, SELF, v:1, k:poo@roupa, rate:100, iagen:_, other:_, alone:5, study:120

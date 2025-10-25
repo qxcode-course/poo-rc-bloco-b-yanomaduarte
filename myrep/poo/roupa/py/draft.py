@@ -5,18 +5,33 @@ class Camisa:
     def getTamanho(self) -> str:
         return self.__tamanho
 
-    def setTamanho(self, valor: str):
-        tamanho_valido = ["P", "M", "G", "GG", "XG"]
+    def setTamanho(self, valor: str) -> bool:
+        tamanho_valido = ["PP", "P", "M", "G", "GG", "XG"]
         if valor in tamanho_valido:
             self.__tamanho = valor
+            return True
         else:
-            print("Tamanho inválido. Use 'P', 'M', 'G', 'GG' ou 'XG'.")
+            print("fail: Valor inválido, tente PP, P, M, G, GG ou XG")
+            return False
+
+    def show(self):
+        print(f"size: ({self.__tamanho})")
 
 
-roupa = Camisa()
+def main():
+    roupa = Camisa()
+    while True:
+        line = input()
+        print(f"${line}")
+        if line == "end":
+            break
 
-while roupa.getTamanho() == "":
-    tamanho_input = input("Digite o tamanho da camisa (P, M, G, GG, XG): ").strip().upper()
-    roupa.setTamanho(tamanho_input)
+        args = line.split()
+        if args[0] == "show":
+            roupa.show()
+        elif args[0] == "size" and len(args) == 2:
+            roupa.setTamanho(args[1])
 
-print("Parabéns, você comprou uma camisa tamanho", roupa.getTamanho())
+
+if __name__ == "__main__":
+    main()

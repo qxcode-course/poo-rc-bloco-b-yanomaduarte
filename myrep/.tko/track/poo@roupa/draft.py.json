@@ -2,8 +2,23 @@
     "patches": [
         {
             "label": "2025-10-22_09-05-40",
-            "content": "class Camisa:\n    def __init__(self):\n        self.__tamanho: str = \"\"\n\n    def getTamanho(self) -> str:\n        return self.__tamanho\n\n    def setTamanho(self, valor: str):\n        tamanho_valido = [\"P\", \"M\", \"G\", \"GG\", \"XG\"]\n        if valor in tamanho_valido:\n            self.__tamanho = valor\n        else:\n            print(\"Tamanho inv\u00e1lido. Use 'P', 'M', 'G', 'GG' ou 'XG'.\")\n\n\nroupa = Camisa()\n\nwhile roupa.getTamanho() == \"\":\n    tamanho_input = input(\"Digite o tamanho da camisa (P, M, G, GG, XG): \").strip().upper()\n    roupa.setTamanho(tamanho_input)\n\nprint(\"Parab\u00e9ns, voc\u00ea comprou uma camisa tamanho\", roupa.getTamanho())\n",
+            "content": "@@ -169,16 +169,8 @@\n str)\n- -%3E bool\n :%0A  \n@@ -295,32 +295,8 @@\n lor%0A\n-            return True%0A\n     \n@@ -381,123 +381,10 @@\n .%22)%0A\n-            return False%0A%0A    def show(self):%0A        print(f%22Camisa tamanho: %7Bself.__tamanho%7D%22)%0A%0A%0Adef main():%0A    \n+%0A%0A\n roup\n@@ -400,298 +400,237 @@\n a()%0A\n-    \n+%0A\n while \n-True:%0A        line = input()%0A        if line == %22end%22:%0A            break%0A%0A        args\n+roupa.getTamanho() == %22%22:%0A    tamanho_input\n  = \n-l\n in\n-e.split()%0A        if args%5B0%5D == %22show%22:%0A            roupa.show()%0A        elif args%5B0%5D == %22size%22 and len(args) == 2:%0A            roupa.setTamanho(args%5B1%5D)%0A%0Aif __name__ == %22__main__%22:%0A    main()\n+put(%22Digite o tamanho da camisa (P, M, G, GG, XG): %22).strip().upper()%0A    roupa.setTamanho(tamanho_input)%0A%0Aprint(%22Parab%C3%A9ns, voc%C3%AA comprou uma camisa tamanho%22, roupa.getTamanho())%0A\n",
             "lines": "22"
+        },
+        {
+            "label": "2025-10-25_10-21-54",
+            "content": "@@ -205,14 +205,8 @@\n  = %5B\n-%22PP%22, \n %22P%22,\n@@ -360,57 +360,58 @@\n nt(%22\n-fail: Valor inv%C3%A1lido, tente PP, P, M, G\n+Tamanho inv%C3%A1lido. Use 'P', 'M', 'G'\n , \n+'\n GG\n+'\n  ou \n+'\n XG\n+'.\n %22)%0A \n@@ -475,15 +475,24 @@\n t(f%22\n-size\n+Camisa tamanho\n : \n-(\n %7Bsel\n@@ -503,17 +503,16 @@\n tamanho%7D\n-)\n %22)%0A%0A%0Adef\n@@ -798,17 +798,16 @@\n gs%5B1%5D)%0A%0A\n-%0A\n if __nam\n@@ -835,9 +835,8 @@\n   main()\n-%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2025-10-25_10-25-27",
+            "content": "@@ -581,34 +581,8 @@\n t()%0A\n-        print(f%22$%7Bline%7D%22)%0A\n     \n",
+            "lines": "36"
+        },
+        {
+            "label": "2025-10-25_10-27-27",
+            "content": "class Camisa:\n    def __init__(self):\n        self.__tamanho: str = \"\"\n\n    def getTamanho(self) -> str:\n        return self.__tamanho\n\n    def setTamanho(self, valor: str) -> bool:\n        tamanho_valido = [\"PP\", \"P\", \"M\", \"G\", \"GG\", \"XG\"]\n        if valor in tamanho_valido:\n            self.__tamanho = valor\n            return True\n        else:\n            print(\"fail: Valor inv\u00e1lido, tente PP, P, M, G, GG ou XG\")\n            return False\n\n    def show(self):\n        print(f\"size: ({self.__tamanho})\")\n\n\ndef main():\n    roupa = Camisa()\n    while True:\n        line = input()\n        print(f\"${line}\")\n        if line == \"end\":\n            break\n\n        args = line.split()\n        if args[0] == \"show\":\n            roupa.show()\n        elif args[0] == \"size\" and len(args) == 2:\n            roupa.setTamanho(args[1])\n\n\nif __name__ == \"__main__\":\n    main()\n",
+            "lines": "37"
         }
     ]
 }
