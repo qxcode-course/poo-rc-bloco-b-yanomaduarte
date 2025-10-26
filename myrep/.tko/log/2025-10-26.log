@@ -1,0 +1,3 @@
+2025-10-26 18:53:54, MOVE, v:1, k:poo@motoca, mode:PICK
+2025-10-26 18:53:54, EXEC, v:1, k:poo@motoca, mode:FULL, rate:100
+2025-10-26 18:53:55, MOVE, v:1, k:poo@motoca, mode:BACK
