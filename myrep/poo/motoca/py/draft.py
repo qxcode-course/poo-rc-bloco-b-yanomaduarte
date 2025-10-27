@@ -82,9 +82,6 @@ def main():
             break
 
         args = line.split()
-        if len(args) == 0:
-            continue
-
         comando = args[0]
 
         if comando == "show":

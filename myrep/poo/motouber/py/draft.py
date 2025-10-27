@@ -65,3 +65,38 @@ class Motorcycle:
 
 def main():
     motorcycle = Motorcycle()
+
+    while True:
+        line = input()
+        print(f"${line}")
+        if line == "end":
+            break
+
+        args = line.split()
+        command = args[0]
+
+        if command == "show":
+            motorcycle.show()
+
+        elif command == "setDriver":
+            name = args[1]
+            money = float(args[2])
+            motorcycle.setDriver(Person(name, money))
+
+        elif command == "setPass":
+            name = args[2]
+            money = float(args[2])
+            motorcycle.setPassenger(Person(name, money))
+
+        elif command == "drive":
+            km = int(args[1])
+            motorcycle.drive(km)
+
+        elif command == "leavePass":
+            motorcycle.leavePass()
+
+        else:
+            print("fail: comando inválido")
+
+if __name__ == "__main__":
+    main()
