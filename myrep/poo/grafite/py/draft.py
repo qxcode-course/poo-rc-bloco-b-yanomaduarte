@@ -1,36 +1,34 @@
 class Lead:
-    def __init__(self, size: float):
-        self.__size: float = float(size)
+    def __init__(self, thickness: float, hardness: str, size: int):
+        self.__thickness = thickness
+        self.__hardness = hardness
+        self.__size = size
+
+    def getThickness(self) -> float:
+        return self.__thickness
+
+    def getHardness(self) -> str:
+        return self.__hardness
+
+    def getSize(self) -> int:
+        return self.__size
+
+    def setSize(self, size: int):
+        self.__size = size
+
+    def usagePerSheet(self) -> int:
+        if self.__hardness == "HB":
+            return 1
+        elif self.__hardness == "2B":
+            return 2
+        elif self.__hardness == "4B":
+            return 4
+        elif self.__hardness == "6B":
+            return 6
+        return 0
 
     def __str__(self) -> str:
-        return f"Grafite: {self.size}mm"
+        return f"[{self.__thickness}:{self.__hardness}:{self.__size}]"
 
 
-class Pencil:
-    def __init__(self):
-        self.tip: Lead | None = None
-
-    def hasGrafite(self) -> bool:
-        return self.tip is not None
-
-    def insert(self, lead: Lead) -> bool:
-        if self.tip is None:
-            self.tip = lead
-            return True
-        return False
-
-    def remove(self) -> Lead | None:
-        if self.tip is None:
-            return None
-        removed = self.tip
-        self.tip = None
-        return removed
-
-    def toString(self) -> str:
-        if self.tip is None:
-            return "Lapiseira: sem grafite"
-        return f"Lapiseira: grafite {self.tip.size}mm"
-
-    def __str__(self) -> str:
-        return self.toString()
          
