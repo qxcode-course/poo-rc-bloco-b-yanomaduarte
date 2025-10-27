@@ -28,3 +28,10 @@
 2025-10-27 10:13:56, MOVE, v:1, k:poo@motoca, mode:PICK
 2025-10-27 10:13:57, EXEC, v:1, k:poo@motoca, mode:FULL, rate:100, size:136
 2025-10-27 10:13:58, MOVE, v:1, k:poo@motoca, mode:BACK
+2025-10-27 11:36:23, MOVE, v:1, k:poo@grafite, mode:PICK
+2025-10-27 11:36:24, EXEC, v:1, k:poo@grafite, mode:FULL, rate:0, size:139
+2025-10-27 11:36:58, EXEC, v:1, k:poo@grafite, mode:FULL, rate:70, size:136
+2025-10-27 11:38:51, EXEC, v:1, k:poo@grafite, mode:FULL, rate:100, size:137
+2025-10-27 11:43:53, EXEC, v:1, k:poo@grafite, mode:FULL, rate:100, size:141
+2025-10-27 11:43:59, MOVE, v:1, k:poo@grafite, mode:BACK
+2025-10-27 11:44:45, SELF, v:1, k:poo@grafite, rate:100, iagen:_gemini, guide:_, alone:6, study:180

@@ -42,6 +42,7 @@ class Pencil:
     def insert(self, lead: Lead):
         if self.hasGrafite():
             print("fail: ja existe grafite")
+            return
 
         if lead.getThickness() != self.__thickness:
             print("fail: calibre incompativel")
@@ -92,14 +93,16 @@ def main():
             break
 
         args = line.split()
+
+        if not  args:
+            print("fail: comando invalido")
+            continue
+        
         command = args[0]
 
         if command == "init":
             if len(args) < 2:
                 print("fail: argumentos insuficientes para 'init'")
-                continue
-            if not is_float_str(args[1]):
-                print(f"fail: argumento invalido para calibre: {args[1]}")
                 continue
 
             pencil = Pencil(float(args[1]))
@@ -133,7 +136,6 @@ def main():
 
         else:
             print("fail: comando invalido")
-
 
 if __name__ == "__main__":
     main()

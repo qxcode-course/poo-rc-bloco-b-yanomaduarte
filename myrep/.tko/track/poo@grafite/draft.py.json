@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-27_11-36-24",
+            "content": "@@ -2486,32 +2486,174 @@\n         continue\n+%0A            if not is_float_str(args%5B1%5D):%0A                print(f%22fail: argumento invalido para calibre: %7Bargs%5B1%5D%7D%22)%0A                continue\n %0A%0A            pe\n",
+            "lines": "139"
+        },
+        {
+            "label": "2025-10-27_11-36-58",
+            "content": "@@ -1121,35 +1121,16 @@\n rafite%22)\n-%0A            return\n %0A%0A      \n",
+            "lines": "136"
+        },
+        {
+            "label": "2025-10-27_11-38-51",
+            "content": "@@ -2337,105 +2337,8 @@\n it()\n-%0A%0A        if not  args:%0A            print(%22fail: comando invalido%22)%0A            continue%0A        \n %0A   \n@@ -3356,16 +3356,17 @@\n lido%22)%0A%0A\n+%0A\n if __nam\n",
+            "lines": "137"
+        },
+        {
+            "label": "2025-10-27_11-43-53",
+            "content": "class Lead:\n    def __init__(self, thickness: float, hardness: str, size: int):\n        self.__thickness = thickness\n        self.__hardness = hardness\n        self.__size = size\n\n    def getThickness(self) -> float:\n        return self.__thickness\n\n    def getHardness(self) -> str:\n        return self.__hardness\n\n    def getSize(self) -> int:\n        return self.__size\n\n    def setSize(self, size: int):\n        self.__size = size\n\n    def usagePerSheet(self) -> int:\n        if self.__hardness == \"HB\":\n            return 1\n        elif self.__hardness == \"2B\":\n            return 2\n        elif self.__hardness == \"4B\":\n            return 4\n        elif self.__hardness == \"6B\":\n            return 6\n        return 0\n\n    def __str__(self) -> str:\n        return f\"[{self.__thickness}:{self.__hardness}:{self.__size}]\"\n\n\nclass Pencil:\n    def __init__(self, thickness: float):\n        self.__thickness = thickness\n        self.__tip = None\n\n    def hasGrafite(self) -> bool:\n        return self.__tip is not None\n\n    def insert(self, lead: Lead):\n        if self.hasGrafite():\n            print(\"fail: ja existe grafite\")\n            return\n\n        if lead.getThickness() != self.__thickness:\n            print(\"fail: calibre incompativel\")\n            return\n\n        self.__tip = lead\n\n    def remove(self) -> Lead:\n        if not self.hasGrafite():\n            print(\"fail: nao existe grafite\")\n            return\n\n        removed_lead = self.__tip\n        self.__tip = None\n        return removed_lead\n\n    def writePage(self):\n        if not self.hasGrafite():\n            print(\"fail: nao existe grafite\")\n            return\n\n        if self.__tip.getSize() <= 10:\n            print(\"fail: tamanho insuficiente\")\n            return\n\n        usage = self.__tip.usagePerSheet()\n        final_size = self.__tip.getSize() - usage\n\n        if final_size < 10:\n            self.__tip.setSize(10)\n            print(\"fail: folha incompleta\")\n\n        else:\n            self.__tip.setSize(final_size)\n\n    def __str__(self) -> str:\n        tip_str = str(self.__tip) if self.hasGrafite() else \"null\"\n        return f\"calibre: {self.__thickness}, grafite: {tip_str}\"\n\n\ndef main():\n    pencil = None\n\n    while True:\n        line = input()\n        print(f\"${line}\")\n        if line == \"end\":\n            break\n\n        args = line.split()\n\n        if not  args:\n            print(\"fail: comando invalido\")\n            continue\n        \n        command = args[0]\n\n        if command == \"init\":\n            if len(args) < 2:\n                print(\"fail: argumentos insuficientes para 'init'\")\n                continue\n\n            pencil = Pencil(float(args[1]))\n\n        elif command == \"show\":\n            if pencil:\n                print(pencil)\n            else:\n                print(\"fail: lapiseira nao iniciada\")\n\n        elif pencil is None:\n            print(\"fail: lapiseira nao iniciada\")\n            continue\n\n        elif command == \"insert\":\n            if len(args) < 4:\n                print(\"fail: argumentos insuficientes para 'insert'\")\n                continue\n\n            caliber = float(args[1])\n            hardness = args[2]\n            size = int(args[3])\n            graphite = Lead(caliber, hardness, size)\n            pencil.insert(graphite)\n\n        elif command == \"remove\":\n            pencil.remove()\n\n        elif command == \"write\":\n            pencil.writePage()\n\n        else:\n            print(\"fail: comando invalido\")\n\nif __name__ == \"__main__\":\n    main()\n",
+            "lines": "141"
+        }
+    ]
+}
