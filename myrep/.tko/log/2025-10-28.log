@@ -1,0 +1,10 @@
+2025-10-28 08:42:01, MOVE, v:1, k:poo@grafite, mode:PICK
+2025-10-28 08:42:02, EXEC, v:1, k:poo@grafite, mode:FULL, rate:100
+2025-10-28 08:42:04, MOVE, v:1, k:poo@grafite, mode:BACK
+2025-10-28 09:18:25, MOVE, v:1, k:poo@relogio, mode:DOWN
+2025-10-28 09:18:25, MOVE, v:1, k:poo@relogio, mode:PICK
+2025-10-28 09:18:25, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0, size:0
+2025-10-28 09:18:27, MOVE, v:1, k:poo@relogio, mode:BACK
+2025-10-28 09:41:29, MOVE, v:1, k:poo@relogio, mode:PICK
+2025-10-28 09:41:30, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0, size:46
+2025-10-28 09:41:34, MOVE, v:1, k:poo@relogio, mode:BACK

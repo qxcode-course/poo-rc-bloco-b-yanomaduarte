@@ -2,20 +2,24 @@ version: '0.2'
 sources:
 - database: local
   link: ''
+  type: local
+  branch: master
   cache_path: ''
   cache_timestamp: ''
   filters: null
 - database: poo
   link: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
+  type: remote
+  branch: master
   cache_path: /home/yanduarte/poo-rc-bloco-b-yanomaduarte/myrep/.tko/cache/poo.md
-  cache_timestamp: '2025-10-27 11:36:19'
+  cache_timestamp: '2025-10-28 08:36:15'
   filters:
   - acesso
   - simples
 expanded:
 - poo@campanha-principal
-- poo@bloco_b-modificadores-de-acesso
 - poo@bloco_b-agregação-simples
+- poo@bloco_b-modificadores-de-acesso
 tasks:
   poo@chinela: '{rate:100, human:_, alone:7, study:120}'
   poo@camisa: '{rate:100, human:_, iagen:_, alone:8, study:120}'
@@ -24,10 +28,10 @@ tasks:
   poo@grafite: '{rate:100, iagen:_gemini, guide:_, alone:6, study:180}'
   poo@motouber: '{rate:100, iagen:_, guide:_, alone:5, study:210}'
 flags:
-  quests: 0
+  quests: 2
   tracks: 0
   tasks: 0
-  graph: 0
+  graph: 1
   xray: 0
 lang: py
-selected: poo@grafite
+selected: poo@relogio
