@@ -8,3 +8,5 @@
 2025-10-28 09:41:29, MOVE, v:1, k:poo@relogio, mode:PICK
 2025-10-28 09:41:30, EXEC, v:1, k:poo@relogio, mode:FULL, rate:0, size:46
 2025-10-28 09:41:34, MOVE, v:1, k:poo@relogio, mode:BACK
+2025-10-28 10:16:31, MOVE, v:1, k:poo@notebook, mode:PICK
+2025-10-28 10:16:34, MOVE, v:1, k:poo@notebook, mode:BACK

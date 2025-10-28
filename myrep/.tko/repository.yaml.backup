@@ -12,7 +12,7 @@ sources:
   type: remote
   branch: master
   cache_path: /home/yanduarte/poo-rc-bloco-b-yanomaduarte/myrep/.tko/cache/poo.md
-  cache_timestamp: '2025-10-28 08:36:15'
+  cache_timestamp: '2025-10-28 10:15:53'
   filters:
   - acesso
   - simples
@@ -34,4 +34,4 @@ flags:
   graph: 1
   xray: 0
 lang: py
-selected: poo@relogio
+selected: poo@notebook
