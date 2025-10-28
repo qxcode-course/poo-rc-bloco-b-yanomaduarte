@@ -55,7 +55,7 @@ class Notebook:
             print("notebook ligado (usando bateria)")
         elif self.__carregador:
             self.__ligado = True
-            print("notebook liga;do (usando carregador)")
+            print("notebook ligado (usando carregador)")
         else:
             print("fail: sem carga na bateria e sem carregador")
 

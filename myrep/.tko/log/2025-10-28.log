@@ -10,3 +10,9 @@
 2025-10-28 09:41:34, MOVE, v:1, k:poo@relogio, mode:BACK
 2025-10-28 10:16:31, MOVE, v:1, k:poo@notebook, mode:PICK
 2025-10-28 10:16:34, MOVE, v:1, k:poo@notebook, mode:BACK
+2025-10-28 11:11:22, MOVE, v:1, k:poo@charger, mode:DOWN
+2025-10-28 11:11:45, MOVE, v:1, k:poo@charger, mode:PICK
+2025-10-28 11:11:46, EXEC, v:1, k:poo@charger, mode:FULL, rate:0, size:136
+2025-10-28 11:12:06, EXEC, v:1, k:poo@charger, mode:FULL, rate:0, size:136
+2025-10-28 11:13:07, EXEC, v:1, k:poo@charger, mode:FULL, rate:0, size:136
+2025-10-28 11:13:24, MOVE, v:1, k:poo@charger, mode:BACK
