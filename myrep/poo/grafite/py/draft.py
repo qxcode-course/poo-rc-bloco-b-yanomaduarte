@@ -94,10 +94,10 @@ def main():
 
         args = line.split()
 
-        if not  args:
+        if not args:
             print("fail: comando invalido")
             continue
-        
+
         command = args[0]
 
         if command == "init":
@@ -136,6 +136,7 @@ def main():
 
         else:
             print("fail: comando invalido")
+
 
 if __name__ == "__main__":
     main()

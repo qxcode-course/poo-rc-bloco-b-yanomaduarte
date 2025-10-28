@@ -2,17 +2,13 @@ version: '0.2'
 sources:
 - database: local
   link: ''
-  type: local
-  branch: master
   cache_path: ''
   cache_timestamp: ''
   filters: null
 - database: poo
   link: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
-  type: remote
-  branch: master
   cache_path: /home/yanduarte/poo-rc-bloco-b-yanomaduarte/myrep/.tko/cache/poo.md
-  cache_timestamp: '2025-10-28 10:15:53'
+  cache_timestamp: '2025-10-28 17:12:21'
   filters:
   - acesso
   - simples
@@ -27,6 +23,7 @@ tasks:
   poo@motoca: '{rate:100, iagen:_, alone:6, study:200}'
   poo@grafite: '{rate:100, iagen:_gemini, guide:_, alone:6, study:180}'
   poo@motouber: '{rate:100, iagen:_, guide:_, alone:5, study:210}'
+  poo@charger: '{rate:100, iagen:_, alone:4, study:240}'
 flags:
   quests: 2
   tracks: 0
